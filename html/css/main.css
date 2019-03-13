@@ -1,0 +1,770 @@
+* {
+    font-family: 'Playfair Display', serif;
+}
+
+html,
+body,
+figure,
+.grid-footer,
+ul,
+li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+body {
+    background-color: #f8f9fa;
+}
+
+.pagesection {
+    margin-bottom: 22px;
+}
+
+.pagesection-center {
+    margin-bottom: 22px;
+    margin-left: 5.5px;
+    margin-right: 5.5px;
+}
+
+#pageheader {
+    position: fixed;
+    z-index: 999;
+    background-color: white;
+    top: 0;
+    left: 0;
+    right: 0;
+    -webkit-box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.39);
+    box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.39);
+    padding-top: 11px;
+}
+
+.nav {
+    text-align: right;
+    overflow: hidden;
+}
+
+#logo-link {
+    float: left;
+    min-width: 120px;
+    min-height: 40px;
+    margin-left: 11px;
+}
+
+.menu {
+    text-align: center;
+    /*  display: none;*/
+    opacity: 0;
+    max-height: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease-out, max-height 0.2s ease-out;
+
+
+
+}
+
+.menu a {
+    clear: both;
+    text-decoration: none;
+    color: black;
+    display: block;
+    margin: 0;
+    line-height: 88px;
+    font-size: 22px;
+}
+
+label {
+    font-size: 24px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#toggle {
+    /* display: none;*/
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+
+}
+
+#toggle:checked + .menu {
+    /* display: block;*/
+    height: 2000px;
+    max-height: 650px;
+    opacity: 1;
+}
+
+#slide1 {
+    background-image: url('../img/pizza.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+}
+
+#slide2 {
+    background-image: url('../img/pasta.jpeg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+}
+
+#slide-menu {
+    background-image: url('../img/menu.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+}
+
+#slide-contact {
+    background-image: url('../img/contact.jpeg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+}
+
+#slide-about {
+    background-image: url('../img/rest.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+}
+
+#top-fig {
+    max-width: 100%;
+    margin-bottom: 22px;
+}
+
+.pagehero h1 {
+    top: 80px;
+    left: 20px;
+    right: 20px;
+    padding: 3px;
+    position: absolute;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-size: 32px;
+    text-align: center;
+    z-index: 333;
+    font-weight: 700;
+}
+
+.grid-features {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.col {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    width: 100%;
+    line-height: 1.4;
+    padding-bottom: 5.5px;
+}
+
+.col > img {
+    max-width: 100%;
+    height: 130px;
+    border-radius: 100px;
+}
+
+.col > h3 {
+    font-size: 33px;
+    margin: 11px 0;
+}
+
+.col > p {
+    font-size: 18px;
+}
+
+.col:last-child > p {
+    margin-bottom: 11px;
+}
+
+.grid-img {
+    margin: 0 10px;
+}
+
+.pics {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    padding: 0;
+    max-width: 100%;
+}
+
+.pics img {
+    display: block;
+    float: left;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 33.333%;
+    height: 100px;
+}
+
+.grid-chefs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.cfcol {
+    width: 32%;
+    line-height: 1.2;
+}
+
+.cfcol > img {
+    max-width: 100%;
+    max-height: 100px;
+}
+
+.cfcol > h3 {
+    font-size: 20px;
+    min-height: 50px;
+}
+
+.cfcol > p {
+    font-size: 16px;
+    font-style: italic;
+}
+
+.responsivegmaps {
+    overflow: hidden;
+    padding-bottom: 25%;
+    position: relative;
+    height: 0;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    filter: grayscale(100%);
+    margin-bottom: 22px;
+}
+
+.responsivegmaps iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.grid-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.ftr {
+    margin-bottom: 0;
+}
+
+.fcol {
+    width: 30%;
+}
+
+.fcol img {
+    max-width: 100%;
+    max-height: 100px;
+}
+
+.fcol p {
+    margin: 0;
+}
+
+.fcol p span {
+    font-weight: 700;
+}
+
+.fcol h4 {
+    margin: 0;
+    padding-bottom: 11px;
+}
+
+.fcol:nth-child(2) {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+}
+
+.social {
+    display: block;
+    line-height: 1.2;
+    min-height: 30px;
+    margin-bottom: 11px;
+}
+
+.social a {
+    font-size: 14px;
+    color: black;
+}
+
+/*Menu page*/
+.mainmenu {
+    margin: 11px;
+}
+
+.mainmenu h2 {
+    font-size: 18px;
+    margin: 11px 0;
+}
+
+.mainmenu h3 {
+    font-size: 14px;
+    margin: 5.5px 0;
+}
+
+.mainmenu li {
+    font-size: 11px;
+}
+
+.mainmenu li:nth-child(even) {
+    border-bottom-style: dotted;
+    border-bottom-width: thin;
+    border-bottom-color: lightgray;
+    margin-bottom: 5.5px;
+}
+
+#desserts {
+    margin-bottom: 44px;
+}
+
+.about {
+    text-align: center;
+    padding-bottom: 22px;
+    margin-left: 5.5px;
+    margin-right: 5.5px;
+}
+
+.abouth1 {
+    font-size: 44px;
+}
+
+.aboutp {
+    font-size: 18px;
+}
+
+/*End of Menu page*/
+
+/*Contact page*/
+.flex-contact li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.flex-contact > li > label {
+    display: inline;
+}
+
+.flex-contact > li {
+    margin-bottom: 22px;
+}
+
+.flex-contact > li > label,
+.flex-contact li p {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 120px;
+    flex: 1 0 120px;
+    max-width: 220px;
+}
+
+.flex-contact > li > label + * {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 220px;
+    flex: 1 0 220px;
+}
+
+.flex-contact li button {
+    margin: 11px auto;
+    padding: 8px 16px;
+    border: none;
+    background: black;
+    color: white;
+    text-transform: uppercase;
+}
+
+.flex-contact li input,
+.flex-contact li textarea {
+    padding: 15px;
+    border: none;
+}
+
+.contactm {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 11px;
+    margin-bottom: 22px;
+}
+
+/*End of contact page*/
+
+/*About page*/
+.about {
+    text-align: center;
+    padding-bottom: 22px;
+    line-height: 1.4;
+}
+
+.abouth1 {
+    font-size: 44px;
+}
+
+.aboutp {
+    font-size: 18px;
+}
+
+/*End of About page*/
+
+/*TABLET*/
+@media screen and (min-width: 768px) {
+
+    label,
+    #toggle {
+        display: none;
+    }
+
+    .cont {
+        display: block;
+    }
+
+    .menu {
+        float: right;
+        display: inline-block;
+        width: 50%;
+        height: 100%;
+        text-align: center;
+        margin: -5.5px 11px 0 0;
+        opacity: 1;
+        max-height: 650px;
+    }
+
+    .menu a {
+        display: inline-block;
+        margin: 0 20px 0 0;
+        line-height: 40px;
+        font-size: 22px;
+    }
+
+    .menu a:last-child {
+        margin: 0;
+    }
+
+    .pagehero h1 {
+        top: 180px;
+        left: 40px;
+        right: 40px;
+        padding: 6px;
+        font-size: 44px;
+    }
+
+    .col > img {
+        max-width: 100%;
+        height: 200px;
+        border-radius: 100px;
+    }
+
+    .col > h3 {
+        font-size: 48px;
+        margin: 26px 0;
+    }
+
+    .col > p {
+        font-size: 22px;
+    }
+
+    .cfcol > img {
+        max-width: 100%;
+        max-height: 200px;
+    }
+
+    .cfcol > h3 {
+        font-size: 36px;
+        min-height: 90px;
+    }
+
+    .cfcol > p {
+        font-size: 24px;
+    }
+
+    .pagesection-center {
+        margin-bottom: 44px;
+        margin-left: 11px;
+        margin-right: 11px;
+    }
+
+    .pagesection {
+        margin-bottom: 44px;
+    }
+
+    .ftr {
+        margin-bottom: 0;
+    }
+
+    .fcol h4 {
+        font-size: 22px;
+    }
+
+    .fcol p {
+        font-size: 18px;
+    }
+
+    .fcol i {
+        font-size: 24px;
+    }
+
+    #slide1 {
+        height: 500px;
+    }
+
+    #slide2 {
+        height: 500px;
+    }
+
+    #slide-menu {
+        height: 300px;
+    }
+
+    #slide-contact {
+        height: 300px;
+    }
+
+    #slide-about {
+        height: 300px;
+    }
+
+    .pics img {
+        height: 200px;
+    }
+
+    /*Menu page*/
+    .mainmenu {
+        margin: 22px;
+    }
+
+    .mainmenu h2 {
+        font-size: 24px;
+        margin: 22px 0;
+    }
+
+    .mainmenu h3 {
+        font-size: 20px;
+        margin: 11px 0;
+    }
+
+    .mainmenu li {
+        font-size: 16px;
+    }
+
+    .mainmenu li:nth-child(even) {
+        border-bottom-style: dotted;
+        border-bottom-width: medium;
+        border-bottom-color: lightgray;
+        margin-bottom: 11px;
+    }
+
+    #desserts {
+        margin-bottom: 66px;
+    }
+    
+    /*End of Menu Page*/
+
+    /*About page*/
+    .about {
+        text-align: center;
+        padding-bottom: 44px;
+        margin-left: 5.5px;
+        margin-right: 5.5px;
+    }
+
+    .abouth1 {
+        font-size: 44px;
+    }
+
+    .aboutp {
+        font-size: 20px;
+    }
+    
+    /*End of About page*/
+
+    /*Contact page*/
+    .contactm {
+        margin-bottom: 44px;
+    }
+
+    /*End of Contact page*/
+}
+
+/*END OF TABLET*/
+
+/*DESKTOP*/
+@media screen and (min-width: 1024px) {
+    .menu {
+        width: 40%;
+        margin: -5.5px 11px 0 0;
+    }
+
+    .pagehero h1 {
+        top: 250px;
+        left: 40px;
+        right: 40px;
+        padding: 6px;
+        font-size: 44px;
+        line-height: 1.4;
+        font-weight: 900;
+    }
+
+    .grid-features {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        text-align: center;
+        -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
+    .col {
+        width: 32%;
+        padding: 0 11px;
+        line-height: 1.4;
+    }
+
+    .fcol h4 {
+        font-size: 26px;
+    }
+
+    .fcol p {
+        font-size: 22px;
+    }
+
+    .fcol i {
+        font-size: 26px;
+    }
+
+    .pics img {
+        height: 400px;
+    }
+
+    .pics img:hover {
+        -webkit-transform: scale(1.010);
+        -ms-transform: scale(1.010);
+        transform: scale(1.010);
+    }
+
+    /*Menu Page*/
+    .mainmenu {
+        margin: 33px;
+    }
+
+    .mainmenu h2 {
+        font-size: 28px;
+        margin: 33px 0 22px 0;
+    }
+
+    .mainmenu h3 {
+        font-size: 24px;
+        margin: 22px 0;
+    }
+
+    .mainmenu li {
+        font-size: 18px;
+    }
+
+    .mainmenu li:nth-child(even) {
+        border-bottom-style: dotted;
+        border-bottom-width: medium;
+        border-bottom-color: lightgray;
+        margin-bottom: 22px;
+    }
+
+    #desserts {
+        margin-bottom: 66px;
+    }
+
+    #slide1 {
+        height: 600px;
+    }
+
+    #slide2 {
+        height: 600px;
+    }
+
+    #slide-menu {
+        height: 400px;
+    }
+
+    #slide-contact {
+        height: 400px;
+    }
+
+    #slide-about {
+        height: 400px;
+    }
+
+    /*End of Menu Page*/
+
+    /*About page*/
+    .aboutp {
+        font-size: 22px;
+    }
+
+    /*End of About page*/
+}
+
+/*END OF DESKTOP*/
